@@ -28,6 +28,7 @@ In the 3GPP specification TS 38.331, this ControlResourceSetId from the ASN.1 en
 
 ![From the 3GPP specifications TS 38.331](https://github.com/qiqingh/mac_sch_22_ControlResourceSet_reencoded_1_report/blob/main/3GPP2.png)
 
+While the 3GPP TS 38.331 specification allows the ControlResourceSetId to range from 0 to 11, this implementation restricts it to a maximum of 3, creating a mismatch. By sending a malformed packet with an out-of-bounds ControlResourceSetId, an attacker can trigger a crash, resulting in a denial of service.
 
 
 ### Vulnerability and Exploit Potential:
